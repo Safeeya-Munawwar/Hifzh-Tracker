@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@import "tailwindcss";
+
+/* =========================
+   HIFZH GREEN THEME
+========================= */
+
+:root {
+  /* Fonts */
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+
+  /* Primary Green */
+  --color-primary: #166534;
+  --color-primary-hover: #14532d;
+  --color-primary-light: #dcfce7;
+
+  /* Borders */
+  --color-primary-border: #bbf7d0;
+
+  /* Background */
+  --bg-color: #ffffff;
+  --bg-secondary: #f0fdf4;
+  --card-bg: #ffffff;
+
+  /* Text */
+  --text-color: #052e16;
+  --text-secondary: #64748b;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(22, 101, 52, 0.08);
+
+  --shadow-lg: 0 20px 40px rgba(22, 101, 52, 0.12);
+}
+
+/* =========================
+   BASE
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+
+  background: var(--bg-color);
+
+  color: var(--text-color);
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+
+  letter-spacing: -0.02em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   COMPONENTS
+========================= */
+
+.theme-card {
+  background: var(--card-bg);
+
+  border: 1px solid var(--color-primary-border);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-card-hover {
+  background: var(--card-bg);
+
+  border: 1px solid var(--color-primary-border);
+
+  box-shadow: var(--shadow-sm);
+
+  transition: all 0.3s ease;
+}
+
+.theme-card-hover:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--shadow-lg);
+}
+
+.theme-input {
+  background: var(--bg-secondary);
+
+  border: 1px solid var(--color-primary-border);
+
+  color: var(--text-color);
+}
+
+.theme-input:focus {
+  outline: none;
+
+  border-color: var(--color-primary);
+}
+
+.theme-muted {
+  color: var(--text-secondary);
+}
+
+.theme-border {
+  border-color: var(--color-primary-border);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section-padding {
+  padding-top: 6rem;
+
+  padding-bottom: 6rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+
+  max-width: 700px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+  background: var(--color-primary);
+
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-primary-border);
+
+  color: var(--text-color);
+}
+
+.btn-outline:hover {
+  background: var(--bg-secondary);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #86efac;
+
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;
+}
+
+/* =========================
+   DATE PICKER
+========================= */
+.react-datepicker {
+  font-family: inherit;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #d1fae5;
+}
+
+.react-datepicker__header {
+  background: #166534;
+  color: white;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header {
+  color: white;
+}
+
+.react-datepicker__day--selected {
+  background: #16a34a;
+}
+
+.react-datepicker__time-container {
+  border-left: 1px solid #dcfce7;
+}
+
+.react-datepicker-popper {
+  z-index: 9999 !important;
+}
+
+.react-datepicker {
+  font-family: inherit;
+}
